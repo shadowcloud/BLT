@@ -1,0 +1,17 @@
+ATM Cards:
+ATM system shall accept ATM cards
+1. Account holders may have ATM cards for withdrawal
+2. ATM cards can only be tied to checking accounts and simple savings accounts
+3. Account holders may not have more than two ATM withdrawals in a day
+
+Database for ATM Cards:
+1. Shall maintain info including customer ID, account the card is linked to, card number, 
+expiration date, CV2 code on back of card
+2. New card can be added to an existing account
+3. Allow permanent storage of all info pertaining to the ATM card
+4. Allow start up and retrieval from the permanent media
+
+Interface for ATM Cards:
+1. Manager can create and delete new ATM Card account in the system
+2. Bank Tellers can retrieve balance, credit or debit an account linked to the ATM Card
+3. Account Holder inserts card into ATM system when prompted to withdraw money
