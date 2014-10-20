@@ -3,6 +3,10 @@ BLT
 
 CSC 406 Project Group 1
 
+	Meeting Time:
+		Thursdays: 4:30 till finish
+
+
 TO DO List:
 
   1. We have to have a Database up and running by next time Oct 24, we have to be able to demostrate:
