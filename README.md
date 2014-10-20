@@ -5,6 +5,8 @@ CSC 406 Project Group 1
 
 	Meeting Time:
 		Thursdays: 4:30 till finish
+		
+	GitHub will be will everything will be posted.
 
 
 TO DO List:
