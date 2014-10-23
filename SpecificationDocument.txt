@@ -15,3 +15,32 @@ Interface for ATM Cards:
 1. Manager can create and delete new ATM Card account in the system
 2. Bank Tellers can retrieve balance, credit or debit an account linked to the ATM Card
 3. Account Holder inserts card into ATM system when prompted to withdraw money
+
+
+Credit Cards System
+1.	Credit cards must be opened by a Manager
+2.	Managers shall set the Credit Card limit
+3.	Credit Cards shall have a finance charge that is calculated monthly
+4.	Managers shall set the finance charge
+5.	Each credit card purchase is checked to see if the balance is not over the limit
+6.	If the balance is over the limit, the credit will be declined
+7.	If the balance is under the limit, the purchase will be approved
+8.	A record of each purchase will be kept
+9.	Credit Card bills shall be sent at the first of each month
+10.	Credit Card bills shall be payable by the 10th of each month
+11.	The finance charge will be calculated on the average balance of the bill throughout the month
+12.	Payments can be credited to the bill throughout the month
+13.	If the balance is paid of entirely by the due date, there will be no finance charge for that month
+
+Credit Cards Interface
+1.	Managers can open or close Credit Card accounts
+2.	Mangers can set the credit limit
+3.	Managers can set the finance charge
+4.	Tellers and Managers can process credit card payments
+
+Credit Cards Database
+1.	Shall maintain Credit Cards to include the following:
+a.	Owner ID, balance, finance charge, purchase history, credit limit
+2.	Shall allow initialization of new Credit Cards and closure of existing Credit Cards
+3.	Storage in a permanent media
+4.	Allow start up and retrieval from permanent media
