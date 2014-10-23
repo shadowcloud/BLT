@@ -59,3 +59,40 @@ Loans:
     2. allow tellers to deduct payments from the loan balance
     3. allow managers to change anything about the loan and create new loans
     4. allow customers to make extra payments at anytime
+    
+    This System Shall
+1. Maintain Checking Accounts
+-The System Shall allow checking accounts
+
+1. Allow Tellers and Bank Managers to open new accounts
+- That's My Bank
+- Gold/Diamond 
+
+2. That's My Bank shall have Transaction Fees
+- 0.50 per withdrawal and deposit
+- 0.75 per monthly transfer of home mortgage, bill pay, or transfer of money between
+- Managers can waive any transaction fees under applicable circumstances.
+accounts.
+
+3. Thats My Bank checking account shall not have a minimum balance
+- customers are not required to keep a minimum balance to keep account status
+
+4. Gold/Diamond checking account shall not charge transaction fees
+- No transaction fee are charged if account balance is kept above 1000.00
+
+5. Gold/Diamond checking accounts shall receive increased intrest rates
+- Intrest rate is flexible and is calculated by the product of .5 * (current Intrest rate)
+
+6. My Bank, Gold, and Diamond checking shall have services
+- Stop Payment of any un cashed check
+- For Stop Payment, the account owner must call the bank to stop the payment
+- OverDraft protection
+- For Over Draft Protection, the account holder must have a back up account assigned to 
+their checking account.
+
+7. My Bank checking and Gold/ Diamond shall have  penalties
+- Stop Payment can be made on any un cashed check for a fee of 15.00
+- OverDrafting will result in the check being left unpaid and the account holder's account
+charged 20.00 for the overdraft.
+- Managers can waive any penalty fees under applicable circumstances.
+accounts.
