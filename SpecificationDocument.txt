@@ -15,3 +15,47 @@ Interface for ATM Cards:
 1. Manager can create and delete new ATM Card account in the system
 2. Bank Tellers can retrieve balance, credit or debit an account linked to the ATM Card
 3. Account Holder inserts card into ATM system when prompted to withdraw money
+
+Loans:
+  1. Loans shall:
+    1. have two types
+      1. short term shall
+        1. be approximately 5 years
+      2. long term shall
+        1. be 15 or 30 years
+    2. have a fixed interest rate
+    3. have a fixed payment plan based on monthly payments 
+    4. have a $75 late fee if payment is late
+    5. have a fixed starting amount
+    6. raise a flag if a payment is missed
+  2. Database for loans shall
+    1. maintain loan info to include (but not limited to)
+      1. Loan Table
+        1. Loan ID
+        2. Customer ID 
+        3. Type of loan
+        4. Original loan amount
+        5. Current loan amount
+        6. Interest rate
+        7. Term (Validate term by checking loan type 15 or 30 for long term and 5 for short)
+        8. Current Payment due date
+        9. Late fee structure 
+        10. Payments made
+        11. Payments left
+        12. Amount of times 30, 60, and 90 days past due
+        13. Current amount due including late fees
+      2. Transactions Table
+        1. Transaction ID
+        2. Loan ID
+        3. Type of transaction (either payment or late fee addition)
+        4. Transaction break down
+          1. Amount that went towards interest, principle and late fees for payments
+          2. Amount added to payment form late fees
+    2. The database shall allow initiation of a new loan by managers
+    3. Shall allow storage in a permanent media of all information
+    4. Must allow startup and retrieval from permanent media.
+  3. Interface for loans shall
+    1. allow tellers and managers to access loan balance, payments made, current payment due, due date, past due status, any accumulated late fees, and customer information(i.e. name, address, phone etc)
+    2. allow tellers to deduct payments from the loan balance
+    3. allow managers to change anything about the loan and create new loans
+    4. allow customers to make extra payments at anytime
