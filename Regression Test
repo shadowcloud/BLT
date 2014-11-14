@@ -34,3 +34,7 @@ ATM
 	-Can I create a new ATM card?
 	-Can I withdraw from a checking account?
 	-Does a withdrawal withdraw from a linked savings account if there is not enough in the checking account?
+	
+General
+	-Can I create a new customer?
+	-Can I remove a customer?	
