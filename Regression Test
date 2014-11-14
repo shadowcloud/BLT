@@ -17,6 +17,7 @@ Checking Accounts
 	-Can I withdraw from a checking account?
 	-Can I make deposits to a checking account?
 	-Can I move money between accounts owned by the same customer?
+	-Is the transaction record for an account updated?
 	-Can I close a checking account?
 
 Loans
@@ -26,6 +27,7 @@ Loans
 	-Can I adjust the interest rate? (Mgr. priveleges)
 	-Can I send out monthly CC statements? (Mgr. priveleges)
 	-Can I make payments on a loan?
+	-Is the transaction for an account updated?
 	-Can I close a short-term loan?
 	-Can I close a long-term loan?
 	-Can I close a credit card account?
