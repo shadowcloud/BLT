@@ -1,0 +1,42 @@
+Regression Test Questions
+
+Savings Accounts
+	-Can I open a new CD?
+	-Can I open a new simple savings account?
+	-Can I adjust the interest rate? (Mgr. priveleges)
+	-Can I send out maturity notices? (Mgr. priveleges)
+	-Can I withdraw from a savings account?
+	-Can I make deposits to a savings account?
+	-Can I close a CD?
+	-Can I close a savings account?
+
+Checking Accounts
+	-Can I open a new TMB account?
+	-Can I open a new Gold/Diamond account?
+	-Can I adjust the interest rate of a Gold/Diamond account? (Mgr. priveleges)
+	-Can I withdraw from a checking account?
+	-Can I make deposits to a checking account?
+	-Can I move money between accounts owned by the same customer?
+	-Is the transaction record for an account updated?
+	-Can I close a checking account?
+
+Loans
+	-Can I open a new short-term loan?
+	-Can I open a new long-term loan?
+	-Can I open a new credit card account?
+	-Can I adjust the interest rate? (Mgr. priveleges)
+	-Can I send out monthly CC statements? (Mgr. priveleges)
+	-Can I make payments on a loan?
+	-Is the transaction for an account updated?
+	-Can I close a short-term loan?
+	-Can I close a long-term loan?
+	-Can I close a credit card account?
+
+ATM
+	-Can I create a new ATM card?
+	-Can I withdraw from a checking account?
+	-Does a withdrawal withdraw from a linked savings account if there is not enough in the checking account?
+	
+General
+	-Can I create a new customer?
+	-Can I remove a customer?	

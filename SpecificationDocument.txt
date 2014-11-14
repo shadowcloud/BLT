@@ -1,17 +1,194 @@
-ATM Cards:
-ATM system shall accept ATM cards
-1. Account holders may have ATM cards for withdrawal
-2. ATM cards can only be tied to checking accounts and simple savings accounts
-3. Account holders may not have more than two ATM withdrawals in a day
+Banking System Specifications Document
 
-Database for ATM Cards:
-1. Shall maintain info including customer ID, account the card is linked to, card number, 
-expiration date, CV2 code on back of card
-2. New card can be added to an existing account
-3. Allow permanent storage of all info pertaining to the ATM card
-4. Allow start up and retrieval from the permanent media
-
-Interface for ATM Cards:
-1. Manager can create and delete new ATM Card account in the system
-2. Bank Tellers can retrieve balance, credit or debit an account linked to the ATM Card
-3. Account Holder inserts card into ATM system when prompted to withdraw money
+This banking system shall:
+  1.	Maintain Savings Accounts
+    a.	the system shall allow CD accounts
+      i.	CDs may be opened in this system by tellers and managers
+     ii.	CDs shall have fixed rates for a specified period (months)
+          1.	rates set by manager
+    iii.	CDs shall mature at the end of the period
+          1.	notification printed for customer
+     iv.	CD must calculate interest at specified times by manager. If no action, CD automatically rolls over at new interest rate
+      v.	penalty for early withdrawal
+     vi.	no money may be added at any time
+    vii.	Key elements in a CD object:
+          1.	ID of ownership
+          2.	interest rate
+          3.	amount
+          4.	opening/closing date
+          5.	maturity date
+          6.	rollover date
+          7.	future value structure
+          8.	penalty structure
+    viii.	CD Interface
+          1.	Manager can open or close CDs
+          2.	Manager sets interest rate for month and penalty structure for new CDs
+          3.	Teller can open a CD
+          4.	closing a CD
+      ix.	The Database for CDs
+          1.	shall maintain CD info to include but not limited to:
+              a.	owner ID
+              b.	amount
+              c.	interest rate
+              d.	opening/closing date
+              e.	maturity date
+              f.	rollover date
+              g.	future value structure
+              h.	penalty structure
+          2.	allow initiation of a new CD and closure of existing CD
+          3.	storage in a permanent media of all information
+          4.	allow startup and retrieval from permanent media
+    b.	the system shall allow simple savings accounts
+      i.	savings accounts may be opened by tellers and managers
+     ii.	savings accounts will have a fixed interest rate that is compounded daily
+          1.	rates set by manager
+    iii.	customers may add or withdraw from savings account at any time
+     iv.	Key elements in Savings object
+          1.	ID of ownership
+          2.	interest rate
+          3.	opening/closing date
+          4.	amount
+      v.	Savings Account interface
+          1.	Manager can open or close savings accounts
+          2.	Manager can debit or credit savings accounts
+          3.	Manger sets interest rate on savings accounts
+          4.	Teller can open a savings account
+          5.	Customer can deposit or withdraw (if enough funds) at any time
+          6.	closing a savings account
+     vi.	The Database for Savings Accounts
+          1.	shall maintain savings account info to include but not limited to:
+              a.	owner ID
+              b.	amount
+              c.	opening/closing date
+              d.	interest rate
+          2.	allow initiation of a new savings account and closure of existing savings account
+          3.	storage in a permanent media of all information
+          4.	allow startup and retrieval from permanent media
+  2.	Maintain Checking Accounts
+    a.	The system shall allow two types of checking accounts:
+        i.	“That’s My Bank” checking account
+            1.	no minimum balance
+            2.	customer charged $.50 per transaction
+                a.	deposits and withdrawals both considered transactions
+            3.	customer charged $.75 per monthly transfer; transfers include but not limited to:
+                a.	home mortgages
+                b.	payment of bills
+                c.	movement of money to other accounts
+       ii.	“Gold/Diamond” checking account
+            1.	minimum balance of $1000.00
+            2.	no charge for transactions if minimum balance maintained
+                a.	if balance falls below minimum balance, account becomes classified as TMB account and begins accruing charges for transactions; can regain Gold/Diamond status when balance exceeds minimum balance
+            3.	account earns interest on average balance of the account
+                a.	interest rate is half of rate of simple savings account; rate set by manager
+      iii.	Regarding both types of accounts:
+            1.	Stop Payment service
+                a.	Customer may call bank and give check number. Bank will issue stop payment and not pay the check.
+                b.	$15.00 charge for each stop payment
+            2.	Overdraft penalty
+                a.	In case of an overdraft, bank returns check unpaid, charges account $20.00
+                b.	offer overdraft protection
+                    i.	customer may specify a simple savings account as an overdraft backup account
+                   ii.	bank will move correct amount of money to cover overdraft from savings account (if there is enough) into checking account, then honor check
+                  iii.	done at no charge
+    b.	Key elements in Checking object
+        i.	ID of ownership
+       ii.	type of account
+      iii.	opening/closing date
+       iv.	balance
+        v.	interest rate (if Gold/Diamond account)
+       vi.	overdraft backup account (if specified)
+      vii.	transaction record
+    c.	Checking Account interface
+        i.	Manager may open or close checking account
+       ii.	Manager may debit or credit any checking account
+      iii.	Manager sets interest rates on Gold/Diamond accounts through savings accounts
+       iv.	Teller may open checking account
+        v.	Customer may deposit or withdraw from checking account
+       vi.	Customer may ask for stop payment on a check
+    d.	The Database for Checking Accounts
+        i.	shall maintain checking account info including but not limited to:
+            1.	owner ID
+            2.	type of account
+            3.	opening/closing date
+            4.	balance
+            5.	interest rate (if applicable)
+            6.	backup account (if specified)
+            7.	transaction record
+       ii.	allow initiation of a new checking account and closure of existing checking account
+      iii.	storage in a permanent media of all information
+       iv.	allow startup and retrieval from permanent media
+  3.	Maintain Loan Accounts
+    a.	The system shall maintain three types of loan accounts:
+        i.	Long-term Mortgage
+            1.	either 15- or 30-year loan
+            2.	fixed rate, fixed payment plan
+              a.	payments received monthly
+              b.	if late payment, $75.00 late fee added to that payment
+              c.	if payment missed, account flagged as problem account
+              d.	extra payments may be made at any time, but no amount may be added to loan
+       ii.	Short-term Loan
+            1.	1- to 5-year loan
+            2.	fixed rate, fixed payment plan
+              a.	payments received monthly
+              b.	if late payment, $75.00 late fee added to that payment
+              c.	if payment missed, account flagged as problem account
+              d.	extra payments may be made at any time, but no amount may be added to loan
+      iii.	Credit Cards
+            1.	debits against loan made with each credit card purchase
+            2.	limit on available credit for each account
+              a.	each purchase is checked to see if it will bring the account balance over limit
+              b.	if not, purchase authorized, account debited
+            3.	record of each purchase is maintained for each account
+            4.	Credit card bills sent on first of each month, payable by the 10th
+              a.	consist of finance charge and total of charges incurred that month
+              b.	account holder may pay entire account balance; no finance charge if this happens
+              c.	Payments can be credited to bill at any time throughout the month; finance charge calculated on average balance of bill throughout the month
+    b.	Key elements in Loan object
+        i.	ID of ownership
+       ii.	type of loan
+            1.	type affects loan term
+      iii.	interest rate
+       iv.	balance
+        v.	last full payment date
+       vi.	transaction record
+      vii.	problem account flag
+    c.	Loan account interface
+        i.	Manager can open or close loan account
+       ii.	Manager can credit or debit loan balance
+      iii.	Manager sets interest rate
+       iv.	Manager initiates process that sends out bills to all loan accounts
+        v.	Customer can make payments on loan account
+    d.	The Database for Loans
+        i.	system shall maintain info including but not limited to:
+            1.	owner ID
+            2.	type of loan
+            3.	term of loan
+              a.	affected by loan type
+            4.	interest rate
+            5.	last full payment date
+            6.	problem account flag
+       ii.	allow initiation of new loan account and closure of loan account
+      iii.	storage in a permanent media of all information
+       iv.	allow startup and retrieval from permanent media
+  4.	Maintain ATM Cards
+    a.	customers that have checking or simple savings accounts may hold ATM cards for withdrawal
+    b.	customers are not allowed to withdraw more than what is in account
+    c.	customers may not make more than two ATM withdrawals per day
+    d.	Key elements in ATM object
+        i.	ID of ownership
+       ii.	account number
+      iii.	account balance
+       iv.	number of withdrawals for the day
+        v.	transaction record for month
+    e.	ATM interface
+        i.	Customer may withdraw from checking or simple savings accounts
+    f.	The Database for ATM cards
+        i.	system shall maintain info including but not limited to:
+            1.	owner ID
+            2.	account number
+            3.	balance
+            4.	number of withdrawals
+            5.	transaction record for month
+       ii.	allow initiation of a new ATM card linked to a checking or simple savings account and closure of ATM card
+      iii.	storage in a permanent media of all information
+       iv.	allow startup and retrieval from permanent media
